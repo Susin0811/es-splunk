@@ -1,0 +1,40 @@
+# Splunk credentials (required)
+splunk_admin_password = "ChangeMe-Splunk-Admin-2024!"
+
+# AWS EC2 key pair (must exist in target region)
+key_pair_name = "your-ec2-keypair"
+
+# Upload Splunk Enterprise tarball to artifacts bucket first, then set URI:
+# aws s3 cp splunk-9.3.2-c8a72b66b813-Linux-x86_64.tgz s3://<artifacts-bucket>/
+splunk_tarball_s3_uri = "s3://splunk-es-prod-artifacts-123456789012/splunk-9.3.2-c8a72b66b813-Linux-x86_64.tgz"
+
+# Optional: Splunk license file
+# splunk_license_uri = "s3://splunk-es-prod-artifacts-123456789012/splunk.license"
+
+# Region
+aws_region = "us-east-1"
+
+# Restrict Web UI access to your corporate network
+allowed_cidr_blocks = ["10.0.0.0/8", "203.0.113.0/24"]
+
+# Instance sizing (adjust for workload)
+search_head_instance_type = "m6i.2xlarge"   # 8 vCPU, 32 GB - ES minimum recommended
+indexer_instance_type     = "m6i.2xlarge"   # 8 vCPU, 32 GB
+management_instance_type  = "m6i.xlarge"    # 4 vCPU, 16 GB
+
+indexer_data_volume_size_gb = 500
+
+# Indexer cluster settings (2 indexers)
+indexer_replication_factor = 2
+indexer_search_factor      = 2
+
+# SmartStore for cost-effective warm/cold storage
+enable_smartstore         = true
+smartstore_retention_days   = 365
+
+# Optional ALB for external HTTPS access
+enable_alb          = false
+# acm_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/xxx"
+
+# Bastion for SSH access to private instances
+enable_bastion = true
