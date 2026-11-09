@@ -1,0 +1,24 @@
+1. Need to a have slide which containing:
+  Tool sets and Technology that currently CDC manageing in terms of the Engineering
+    Splunk
+    SOAR
+    Vectra
+    Cofensne
+  Some details about these tool sets, what we are doing with this
+
+2. On the Raj related slieds.
+  Add the point covering -  why this these are not identified and worked earlier.?
+3. In SAP monitring
+    We need add : We are Normally monitoring all the servers and application in PDO using the available telemery data. This initiate to focue on the Business critical apllication SAP. 
+    We have indenfied the 60+ SAP servers and monirong enabled.
+4. Service Account monitoing:
+   It is a automation. Mentioned, this is SOC beyond work and it support Complaince and Audit purpose. Also, mentioned what challanges we have faced and how we come access and 
+    How this supports for end users.
+5. Tenable
+    Added the hyper link to the dashboards
+    Business value
+    1. Enrhcing the detection logs with IPS and WAF data, like If any vulnerbilty being targeted from external source
+    2. Automated the report delivery to respecitive application details and servers owners
+
+6. AI:
+Add the details about this AI integration details going to support the business team. We need to mentioned that.
